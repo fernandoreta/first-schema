@@ -3,7 +3,8 @@
   "schematics": {
     "schematics": {
       "description": "A blank schematic.",
-      "factory": "./schematics/index#schematics"
+      "factory": "./schematics/index#schematics",
+      "schema": "./schematics/schema.json"
     }
   }
 }
