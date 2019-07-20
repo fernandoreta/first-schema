@@ -2,8 +2,9 @@
   "properties": {
     "name": {
       "type": "string",
-      "description": "The name of the person to 👋 to.",
-      "x-prompt": "What is the name of the person you want to say hi to?"
+      "description": "Name of the componet",
+      "default": "ng-conf",
+      "x-prompt": "Enter the name of the component"
     }
   }
 }
