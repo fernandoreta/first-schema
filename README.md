@@ -1,27 +1,28 @@
-# FirstSchema
+# Getting Started With Schematics
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
+This repository is a basic Schematic implementation that serves as a starting point to create and publish Schematics to NPM.
 
-## Development server
+### Testing
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+To test locally, install `@angular-devkit/schematics-cli` globally and use the `schematics` command line tool. That tool acts the same as the `generate` command of the Angular CLI, but also has a debug mode.
 
-## Code scaffolding
+Check the documentation with
+```bash
+schematics --help
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Unit Testing
 
-## Build
+`npm run test` will run the unit tests, using Jasmine as a runner and test framework.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+### Publishing
 
-## Running unit tests
+To publish, simply do:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```bash
+npm run build
+npm publish
+```
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+That's it!
+ 
