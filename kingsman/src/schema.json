@@ -1,0 +1,21 @@
+{
+    "properties": {
+        "fileName": {
+            "description": "Give the file a name",
+            "default": "index",
+            "x-prompt": "Give the file a name"
+        },
+        "fileExtension": {
+            "enum": ["ts", "html", "css", "spec.ts"],
+            "description": "The file extension type",
+            "default": "html",
+            "x-prompt": "Select a file type extension"
+        },
+        "name": {
+            "type": "string",
+            "description": "Name that will be appear",
+            "default": "defaultName",
+            "x-prompt": "What is your name..?"
+        }
+    }
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../node_modules/@angular-devkit/schematics/collection-schema.json",
+  "schematics": {
+    "kingsman": {
+      "description": "A blank schematic.",
+      "factory": "./kingsman/index#kingsman",
+      "schema": "./schema.json"
+    }
+  }
+}
