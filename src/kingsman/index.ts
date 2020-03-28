@@ -11,6 +11,7 @@ interface MyData {
 
 export function kingsman(_options: MyData): Rule {
   return (tree: Tree, _context: SchematicContext) => {
-    return tree.create(`${_options.fileName}.${_options.fileExtension}`, `Hi Eggsy! my name is ${_options.name}`)
+    return tree.create(`${_options.fileName}.${_options.fileExtension}`, 
+    `Hi Eggsy! my name is ${_options.name}`)
   };
 }

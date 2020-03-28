@@ -4,7 +4,7 @@
     "kingsman": {
       "description": "A blank schematic.",
       "factory": "./kingsman/index#kingsman",
-      "schema": "./schema.json"
+      "schema": "./kingsman/schema.json"
     }
   }
 }
