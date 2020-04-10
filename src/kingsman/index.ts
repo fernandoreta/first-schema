@@ -3,19 +3,15 @@ import { Rule, SchematicContext, Tree, url, apply } from '@angular-devkit/schema
 
 // You don't have to export the function as default. You can also have more than one rule factory
 // per file.
-interface MyData {
-  name: string
-  fileName: string;
-  fileExtension: string;
-}
 
-export function kingsman(_options: MyData): Rule {
+
+export function kingsman(): Rule {
   return (tree: Tree, _context: SchematicContext) => {
-    const rules: Rule[] = [];
-    // use the url function to retrieve the source
-    const source = url('./files');
-    //use the apply function to apply the rules
-    tree;
-    return apply(source, rules)(_context);
+     // todo: use the template() function and provide the strings and _options members
+     const rules: Rule[] = [];
+
+     const source = url("./files");
+     tree;
+     return apply(source, rules)(_context);
   };
 }
