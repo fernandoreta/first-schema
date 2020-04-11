@@ -1,21 +1,16 @@
 {
     "properties": {
-        "fileName": {
-            "description": "Give the file a name",
-            "default": "index",
-            "x-prompt": "Give the file a name"
-        },
-        "fileExtension": {
-            "enum": ["ts", "html", "css", "spec.ts"],
-            "description": "The file extension type",
-            "default": "html",
-            "x-prompt": "Select a file type extension"
-        },
         "name": {
             "type": "string",
-            "description": "Name that will be appear",
+            "description": "Name the component to create",
             "default": "defaultName",
-            "x-prompt": "What is your name..?"
+            "x-prompt": "What is the name of the component.."
+        },
+        "titlePage": {
+            "type": "string",
+            "description": "Page title",
+            "default": "Angular Schematics",
+            "x-prompt": "Wich title.."
         }
     }
 }

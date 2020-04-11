@@ -1,17 +1,44 @@
-import { Rule, SchematicContext, Tree, url, apply } from '@angular-devkit/schematics';
+import { Rule, SchematicContext, Tree, url, apply, template, move, chain, SchematicsException } from '@angular-devkit/schematics';
+import { strings } from '@angular-devkit/core';
+import { dasherize } from '@angular-devkit/core/src/utils/strings';
 
 
 // You don't have to export the function as default. You can also have more than one rule factory
 // per file.
 
+interface myOptions {
+  componentName: string,
+  name: string,
+  titlePage: string
+}
 
-export function kingsman(): Rule {
+export function kingsman(_options: myOptions): Rule {
+  _options = {
+    ..._options,
+    ...{ selector: `app-${dasherize(_options.name)}`, style: "css" }
+  };
+
   return (tree: Tree, _context: SchematicContext) => {
-     // todo: use the template() function and provide the strings and _options members
-     const rules: Rule[] = [];
+    return chain([addFiles(_options)])(tree, _context);
+  };
+}
 
-     const source = url("./files");
-     tree;
-     return apply(source, rules)(_context);
+function addFiles(_options: myOptions): Rule {
+  return (tree: Tree, context: SchematicContext) => {
+    if (!_options.name) {
+      throw new SchematicsException("Entity name is required");
+    }
+    const path = `./src/app/components`;
+
+    context.logger.debug(`adding files to ${path} dir`);
+
+    return apply(url("./files"), [
+      template({
+        ...strings,
+        ..._options
+      }),
+      move(path)
+    ])(context);
+    tree;
   };
 }
