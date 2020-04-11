@@ -8,19 +8,7 @@ import { dasherize } from '@angular-devkit/core/src/utils/strings';
 
 interface myOptions {
   componentName: string,
-  name: string,
-  titlePage: string
-}
-
-export function kingsman(_options: myOptions): Rule {
-  _options = {
-    ..._options,
-    ...{ selector: `app-${dasherize(_options.name)}`, style: "css" }
-  };
-
-  return (tree: Tree, _context: SchematicContext) => {
-    return chain([addFiles(_options)])(tree, _context);
-  };
+  name: string
 }
 
 function addFiles(_options: myOptions): Rule {
@@ -40,5 +28,16 @@ function addFiles(_options: myOptions): Rule {
       move(path)
     ])(context);
     tree;
+  };
+}
+
+export function kingsman(_options: myOptions): Rule {
+  _options = {
+    ..._options,
+    ...{ selector: `app-${dasherize(_options.name)}`, style: "css" }
+  };
+
+  return (tree: Tree, _context: SchematicContext) => {
+    return chain([addFiles(_options)])(tree, _context);
   };
 }
