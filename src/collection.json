@@ -5,6 +5,11 @@
       "description": "A blank schematic.",
       "factory": "./kingsman/index#kingsman",
       "schema": "./kingsman/schema.json"
+    },
+    "edit": {
+      "description": "A blank schematic.",
+      "factory": "./edit/index#edit",
+      "schema": "./edit/schema.json"
     }
   }
 }

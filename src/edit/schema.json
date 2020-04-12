@@ -1,0 +1,10 @@
+{
+    "properties": {
+        "prop": {
+            "type": "string",
+            "description": "Name of the property to add",
+            "default": "Example",
+            "x-prompt": "Name of the property to add"
+        }
+    }
+}
