@@ -2,9 +2,9 @@
     "properties": {
         "prop": {
             "type": "string",
-            "description": "Name of the property to add",
-            "default": "Example",
-            "x-prompt": "Name of the property to add"
+            "description": "Property Name Menu",
+            "default": "contact",
+            "x-prompt": "Name the menu to add.."
         }
     }
 }

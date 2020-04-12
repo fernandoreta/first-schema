@@ -9,7 +9,8 @@
     "clean": "git checkout HEAD -- sandbox && git clean -f -d sandbox",
     "test": "npm run build:clean:launch",
     "launch": "cd sandbox && ng g kingsman:kingsman",
-    "link:schematic": "npm link && cd sandbox && npm link kingsman"
+    "link:schematic": "npm link && cd sandbox && npm link kingsman",
+    "addprop": "npm run build && cd sandbox && ng g kingsman:edit"
   },
   "keywords": [
     "schematics"
